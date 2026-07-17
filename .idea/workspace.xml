@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="add hw1 + fix">
+    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="remove unnecessary">
+      <change afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/components/ShopItemClass.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/eslint.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +74,7 @@
       <recent name="C:\Users\Admin\Desktop\netology\homework-1 (components)\store-func\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (2)">
+  <component name="RunManager" selected="npm.dev (1)">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/homework-1 (components)/store-func/package.json" />
       <command value="run" />
@@ -124,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev (2)" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev (3)" />
       </list>
     </recent_temporary>
@@ -188,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784301959319</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remove unnecessary">
+      <option name="closed" value="true" />
+      <created>1784303002011</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1784303002011</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +210,7 @@
     <MESSAGE value="set up folders for Homework 1 and VITE in them" />
     <MESSAGE value="removing the extra" />
     <MESSAGE value="add hw1 + fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hw1 + fix" />
+    <MESSAGE value="remove unnecessary" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary" />
   </component>
 </project>
