@@ -1,18 +1,23 @@
+import moment from "moment/min/moment-with-locales";
+
+moment.locale("ru");
+
 function Calendar({ date }) {
-  const start_day = date.clone().startOf("month").startOf("isoWeek");
-  const last_day = date.clone().endOf("month").endOf("isoWeek");
+  const current = moment(date);
+  const start_day = current.clone().startOf("month").startOf("isoWeek");
+  const last_day = current.clone().endOf("month").endOf("isoWeek");
   const count_days = last_day.diff(start_day, "days") + 1;
 
   const days = Array.from({ length: count_days }, (_, i) => {
     const d = start_day.clone().add(i, "day");
-    const className = d.isSame(date, "day")
+    const className = d.isSame(current, "day")
       ? "ui-datepicker-today"
-      : !d.isSame(date, "month")
+      : !d.isSame(current, "month")
         ? "ui-datepicker-other-month"
         : "";
     return {
       day: d.date(),
-      className: className,
+      className,
       key: d.format("YYYY-MM-DD"),
     };
   });
@@ -21,24 +26,25 @@ function Calendar({ date }) {
   for (let i = 0; i < days.length; i += 7) {
     weeks.push(days.slice(i, i + 7));
   }
-  console.log(weeks);
 
   return (
     <div className="ui-datepicker">
       <div className="ui-datepicker-material-header">
-        <div className="ui-datepicker-material-day">{date.format("dddd")} </div>
+        <div className="ui-datepicker-material-day">
+          {current.format("dddd")}
+        </div>
         <div className="ui-datepicker-material-date">
-          <div className="ui-datepicker-material-day-num">{date.date()}</div>
+          <div className="ui-datepicker-material-day-num">{current.date()}</div>
           <div className="ui-datepicker-material-month">
-            {date.format("D MMMM").split(" ")[1]}
+            {current.format("D MMMM").split(" ")[1]}
           </div>
-          <div className="ui-datepicker-material-year">{date.year()}</div>
+          <div className="ui-datepicker-material-year">{current.year()}</div>
         </div>
       </div>
       <div className="ui-datepicker-header">
         <div className="ui-datepicker-title">
-          <span className="ui-datepicker-month">{date.format("MMMM")}</span>
-          &nbsp;<span className="ui-datepicker-year">{date.year()}</span>
+          <span className="ui-datepicker-month">{current.format("MMMM")}</span>
+          &nbsp;<span className="ui-datepicker-year">{current.year()}</span>
         </div>
       </div>
       <table className="ui-datepicker-calendar">
