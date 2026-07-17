@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="set up folders for Homework 1 and VITE in them">
+    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="removing the extra">
       <change afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/components/ShopItemFunc.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/public/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/public/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/eslint.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/assets/hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/assets/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784287083915</updated>
       <workItem from="1784287085661" duration="2037000" />
-      <workItem from="1784289193808" duration="8609000" />
+      <workItem from="1784289193808" duration="9285000" />
     </task>
     <task id="LOCAL-00001" summary="set up folders for Homework 1 and VITE in them">
       <option name="closed" value="true" />
@@ -172,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784294121700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="removing the extra">
+      <option name="closed" value="true" />
+      <created>1784301301541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784301301541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +193,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set up folders for Homework 1 and VITE in them" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up folders for Homework 1 and VITE in them" />
+    <MESSAGE value="removing the extra" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing the extra" />
   </component>
 </project>
