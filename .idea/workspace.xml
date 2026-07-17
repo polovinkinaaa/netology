@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="removing the extra">
-      <change afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/components/ShopItemFunc.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/eslint.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/vite.config.js" afterDir="false" />
+    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="add hw1 + fix">
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/res/preview.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +69,7 @@
       <recent name="C:\Users\Admin\Desktop\netology\homework-1 (components)\store-func\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.lint">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/homework-1 (components)/store-func/package.json" />
       <command value="run" />
@@ -118,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.lint" />
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev (3)" />
         <item itemvalue="npm.dev (2)" />
       </list>
@@ -140,7 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784287083915</updated>
       <workItem from="1784287085661" duration="2037000" />
-      <workItem from="1784289193808" duration="9285000" />
+      <workItem from="1784289193808" duration="9626000" />
     </task>
     <task id="LOCAL-00001" summary="set up folders for Homework 1 and VITE in them">
       <option name="closed" value="true" />
@@ -174,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784301301541</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add hw1 + fix">
+      <option name="closed" value="true" />
+      <created>1784301959319</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1784301959319</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +196,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set up folders for Homework 1 and VITE in them" />
     <MESSAGE value="removing the extra" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing the extra" />
+    <MESSAGE value="add hw1 + fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hw1 + fix" />
   </component>
 </project>
