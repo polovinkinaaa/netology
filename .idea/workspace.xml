@@ -5,15 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="set up folders for Homework 1 and VITE in them">
+      <change afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/components/ShopItemFunc.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/css/main.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/public/favicon.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/public/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/assets/hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/assets/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-func/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-func/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,10 +71,17 @@
     "npm.dev (2).executor": "Run",
     "npm.dev (3).executor": "Run",
     "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "ts.external.directory.path": "C:\\Users\\Admin\\Desktop\\netology\\homework-1 (components)\\calendar\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.dev (3)">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\netology\homework-1 (components)\store-func\src\assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev (1)">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/homework-1 (components)/store-func/package.json" />
       <command value="run" />
@@ -89,11 +112,22 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/homework-1 (components)/store-func/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.dev (3)" />
         <item itemvalue="npm.dev (2)" />
-        <item itemvalue="npm.dev (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -112,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784287083915</updated>
       <workItem from="1784287085661" duration="2037000" />
-      <workItem from="1784289193808" duration="2338000" />
+      <workItem from="1784289193808" duration="8609000" />
     </task>
     <task id="LOCAL-00001" summary="set up folders for Homework 1 and VITE in them">
       <option name="closed" value="true" />
@@ -130,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784291024075</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="set up folders for Homework 1 and VITE in them">
+      <option name="closed" value="true" />
+      <created>1784294121700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1784294121700</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
