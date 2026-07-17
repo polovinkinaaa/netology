@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="remove unnecessary">
-      <change afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/components/ShopItemClass.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="703ed128-bede-4ab7-90aa-62520ca95805" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/src/components/Calendar/Calendar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/store-class/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/assets/preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/public/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/public/icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/homework-1 (components)/calendar/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/assets/hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/assets/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-1 (components)/calendar/vite.config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,33 +63,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev (2).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev (3).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\Desktop\\netology\\homework-1 (components)\\calendar\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.App.jsx.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
+    "npm.dev (2).executor": "Run",
+    "npm.dev (3).executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.lint (1).executor": "Run",
+    "npm.lint.executor": "Run",
+    "ts.external.directory.path": "C:\\Users\\Admin\\Desktop\\netology\\homework-1 (components)\\calendar\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\netology\homework-1 (components)\store-func\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.lint (1)">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/homework-1 (components)/store-func/package.json" />
       <command value="run" />
@@ -105,6 +121,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/homework-1 (components)/store-class/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/homework-1 (components)/store-func/package.json" />
       <command value="run" />
@@ -117,6 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint (1)" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev (2)" />
         <item itemvalue="npm.lint" />
@@ -189,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784303002011</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dz 1.2">
+      <option name="closed" value="true" />
+      <created>1784304983110</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1784304983110</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +246,8 @@
     <MESSAGE value="removing the extra" />
     <MESSAGE value="add hw1 + fix" />
     <MESSAGE value="remove unnecessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary" />
+    <MESSAGE value="dz 1.2" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
