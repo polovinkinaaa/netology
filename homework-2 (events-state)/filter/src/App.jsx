@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import './App.css'
+import Portfolio from "./components/Portfolio/Portfolio.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
       <div className="App">
-        <button className="btn btn-primary">Primary</button>
+        <Portfolio/>
       </div>
   )
 }
