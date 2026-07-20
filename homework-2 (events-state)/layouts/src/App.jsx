@@ -1,11 +1,11 @@
-import Store from './components/Store/Store.jsx';
+import Store from "./components/Store/Store.jsx";
 
 function App() {
   return (
-      <div className="App">
-          <Store />
-      </div>
-  )
+    <div className="App">
+      <Store />
+    </div>
+  );
 }
 
-export default App
+export default App;
