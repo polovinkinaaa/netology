@@ -1,0 +1,27 @@
+.shop-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0 16px;
+}
+
+.shop-item img{
+    height: 4em;
+    width: 4em;
+}
+
+.shop-item button{
+    border-radius: 5px;
+}
+
+.shop-item > .price {
+    color: red;
+}
+
+.shop-item > .name {
+    text-transform: uppercase;
+    font-weight: bold;
+}

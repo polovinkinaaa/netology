@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import Store from './components/Store/Store.jsx';
 
 function App() {
-
   return (
-      <>
-        <button className="btn btn-outline btn-primary">Primary</button>
-      </>
+      <div className="App">
+          <Store />
+      </div>
   )
 }
 
