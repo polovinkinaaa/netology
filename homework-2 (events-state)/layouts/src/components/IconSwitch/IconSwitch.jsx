@@ -1,3 +1,4 @@
+import "./IconSwitch.css"
 function IconSwitch({ icon, onSwitch }) {
     return (
         <div className="icon-switch">

@@ -1,0 +1,9 @@
+.icon-switch{
+    display: flex;
+    justify-content: end;
+    padding-right: 1%;
+}
+
+.icon-switch span {
+    font-size: 2rem;
+}

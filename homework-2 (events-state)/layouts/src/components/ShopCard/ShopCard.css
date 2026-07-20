@@ -1,0 +1,57 @@
+.shop-card{
+    position: relative;
+}
+
+
+.shop-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.shop-card > .name {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: clamp(0.55rem, 2vw, 0.85rem);
+}
+
+.shop-card > .color {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    font-size: clamp(0.55rem, 2vw, 0.85rem);
+}
+
+.shop-card > .footer-price {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: red;
+    min-width: 0;
+    font-size: clamp(0.55rem, 2vw, 0.85rem);
+}
+
+.shop-card > .footer-price .btn {
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 100%;
+    height: 100%;
+    font-size: clamp(0.55rem, 2vw, 0.85rem);
+    white-space: nowrap;
+}
+
+

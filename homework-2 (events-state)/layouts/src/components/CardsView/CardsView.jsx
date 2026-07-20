@@ -1,4 +1,5 @@
 import ShopCard from '../ShopCard/ShopCard.jsx'
+import "./CardView.css"
 
 function CardsView({cards}) {
     return (
