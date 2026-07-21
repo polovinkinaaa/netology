@@ -1,5 +1,5 @@
-import DropdownList from "../DropdownList/DropdownList.jsx";
-import { useState } from "react";
+import DropdownList from '../DropdownList/DropdownList.jsx';
+import { useState } from 'react';
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,7 @@ function Dropdown() {
         <div className="container">
           <div
             data-id="wrapper"
-            className={`dropdown-wrapper ${isOpen ? "open" : ""}`}
+            className={`dropdown-wrapper ${isOpen ? 'open' : ''}`}
           >
             <button
               data-id="toggle"
