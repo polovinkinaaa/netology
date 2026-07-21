@@ -11,10 +11,10 @@ function DropdownList() {
   ];
   return (
     <ul data-id="dropdown" className="dropdown">
-      {dropdownItems.map((item, index) => (
+      {dropdownItems.map((item) => (
         <li
           style={{ color: selectedElement === item ? '#5380F7' : '#666' }}
-          key={index}
+          key={item}
           onClick={() => setSelectedElement(item)}
         >
           <a href="#">{item}</a>
