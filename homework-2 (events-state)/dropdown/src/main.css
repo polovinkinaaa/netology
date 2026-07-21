@@ -94,11 +94,6 @@ ul {
     position: relative;
     background: #FFFFFF;
     padding: 0 20px;
-    color: #666;
-}
-
-.dropdown-wrapper .dropdown li.active {
-    color: #5380F7;
 }
 
 .dropdown-wrapper .dropdown li:first-child {
