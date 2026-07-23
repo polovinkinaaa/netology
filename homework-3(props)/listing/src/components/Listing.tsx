@@ -32,7 +32,6 @@ function Listing({ items = [] }: ListingProps) {
               <p className="item-title">{croppedText}</p>
               <p className="item-price">{price}</p>
               <p className={`item-quantity ${classNameLevel}`}>
-                {" "}
                 {item.quantity} left
               </p>
             </div>
