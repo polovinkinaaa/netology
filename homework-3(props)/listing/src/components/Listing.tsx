@@ -11,10 +11,10 @@ function Listing({ items = [] }: ListingProps) {
           item.title.length > 50 ? item.title.slice(0, 50) + "…" : item.title;
         const price: string =
           item.currency_code === "USD"
-            ? "$" + item.price.toString()
+            ? "$" + item.price
             : item.currency_code == "EUR"
-              ? "€" + item.price.toString()
-              : item.price.toString() + " " + item.currency_code;
+              ? "€" + item.price
+              : item.price + " " + item.currency_code;
         const classNameLevel: string =
           item.quantity > 20
             ? "level-high"
