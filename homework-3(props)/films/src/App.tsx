@@ -1,11 +1,8 @@
-import './App.css'
+import Stars from "../components/Stars/Stars.tsx";
 
 function App() {
-
-  return (
-    <>
-    </>
-  )
+  const count: number = 3;
+  return <Stars count={count} />;
 }
 
-export default App
+export default App;

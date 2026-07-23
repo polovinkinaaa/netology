@@ -1,0 +1,9 @@
+.u-clearfix {
+  list-style: none;
+}
+
+.card-body-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
