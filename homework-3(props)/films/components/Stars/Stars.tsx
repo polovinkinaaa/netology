@@ -1,11 +1,11 @@
 import Star from "../Star/Star.tsx";
 import "./Stars.css";
-type CountStairs = {
+type CountStars = {
   count?: number;
 };
 
-function Stars({ count = 0 }: CountStairs) {
-  const isCorrectCount: boolean = count >= 1 && count <= 5; //�� ������ ������ �� �� ���� �����, �� ���� ��� �������� ����� ����� � ����������� ����
+function Stars({ count = 0 }: CountStars) {
+  const isCorrectCount: boolean = count >= 1 && count <= 5; //не поняла обязан ли он быть целым, но если что рисуется целое число с округлением вниз
   return (
     <>
       {isCorrectCount ? (
