@@ -14,8 +14,8 @@ function Typing({
         <span className="message-data-time">{message.time}</span>
       </div>
       <i className="fa fa-circle online"></i>
-      <i className="fa fa-circle online"></i>
-      <i className="fa fa-circle online"></i>
+      <i className="fa fa-circle online light-green"></i>
+      <i className="fa fa-circle online white"></i>
     </li>
   );
 }

@@ -222,3 +222,11 @@ li {
   clear: both;
   height: 0;
 }
+
+.white {
+  color: lightgreen;
+}
+
+.light-green {
+  color: #75cb7d;
+}
