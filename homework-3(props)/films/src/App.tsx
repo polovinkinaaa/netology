@@ -1,4 +1,4 @@
-import Stars from "../components/Stars/Stars.tsx";
+import Stars from "./components/Stars/Stars.tsx";
 
 function App() {
   const count: number = 3;
