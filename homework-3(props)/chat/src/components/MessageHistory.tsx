@@ -3,6 +3,7 @@ import Response from "./Response";
 import Message from "./Message";
 import Typing from "./Typing.tsx";
 function MessageHistory({ list = [] }: { list: TypeMessage[] }) {
+  if (list.length === 0) return null;
   return (
     <ul>
       {list.map((msg: TypeMessage) =>
