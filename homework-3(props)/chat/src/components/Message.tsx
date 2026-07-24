@@ -1,10 +1,6 @@
-function Message({
-  from,
-  message,
-}: {
-  from: { name: string };
-  message: { time: string; text?: string };
-}) {
+import type { MessageProps } from "../../assets/data.tsx";
+
+function Message({ from, message }: MessageProps) {
   return (
     <li>
       <div className="message-data">

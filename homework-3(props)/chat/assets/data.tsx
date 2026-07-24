@@ -8,6 +8,11 @@ export type TypeMessage = {
   text?: string;
 };
 
+export type MessageProps = {
+  from: { name: string };
+  message: { time: string; text?: string };
+};
+
 export const messages: TypeMessage[] = [
   {
     id: "chat-5-1090",

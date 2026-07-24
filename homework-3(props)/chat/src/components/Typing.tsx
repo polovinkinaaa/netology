@@ -1,10 +1,6 @@
-function Typing({
-  from,
-  message,
-}: {
-  from: { name: string };
-  message: { time: string };
-}) {
+import type { MessageProps } from "../../assets/data.tsx";
+
+function Typing({ from, message }: MessageProps) {
   return (
     <li>
       <div className="message-data">

@@ -1,10 +1,6 @@
-function Response({
-  from,
-  message,
-}: {
-  from: { name: string };
-  message: { time: string; text?: string };
-}) {
+import type { MessageProps } from "../../assets/data.tsx";
+
+function Response({ from, message }: MessageProps) {
   return (
     <li className="clearfix">
       <div className="message-data align-right">
