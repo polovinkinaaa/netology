@@ -3,8 +3,11 @@ import "./Color.css";
 import { colord } from "colord";
 
 function getBackgroundColor(color: string): string {
-  if (color === "Ошибка" || color === "") {
+  if (color === "") {
     return "rgb(255, 255, 255)";
+  }
+  if (color === "Ошибка") {
+    return "rgb(255, 0, 0)";
   }
   return color;
 }
@@ -15,7 +18,7 @@ function Color() {
 
   function isAllInput(inputValue: string) {
     setInput(inputValue);
-    if (inputValue.length == 7) {
+    if (inputValue.length === 7) {
       if (colord(inputValue).isValid()) {
         setColorRGB(colord(inputValue).toRgbString());
       } else {
