@@ -1,25 +1,39 @@
 import { useState } from "react";
 import "./Color.css";
+import {colord} from "colord";
+
+function getBackgroundColor(color: string): string {
+    if (color === "Ошибка" || color === "") {
+        return "rgb(255, 255, 255)";
+    }
+    return color;
+}
 
 function Color() {
-  const [color, setColor] = useState("rgb(255,255,255)");
+  const [colorRGB, setColorRGB] = useState("");
   const [input, setInput] = useState("");
 
-  function isAllInput(color: string) {
-    setInput(color);
-    if (color.length == 7) {
-      setColor(color);
+  function isAllInput(inputValue: string) {
+    setInput(inputValue);
+    if (inputValue.length == 7) {
+        if (colord(inputValue).isValid()) {
+            setColorRGB(colord(inputValue).toRgbString());
+        } else {
+            setColorRGB("Ошибка")
+        }
+    } else {
+        setColorRGB("")
     }
   }
 
   return (
-    <div className="color" style={{ backgroundColor: color }}>
+    <div className="color" style={{ backgroundColor: getBackgroundColor(colorRGB) }}>
       <input
         type="text"
         value={input}
         onChange={(e) => isAllInput(e.target.value)}
       />
-      <div className="color-result">{color}</div>
+      <div className="color-result">{colorRGB}</div>
     </div>
   );
 }
