@@ -1,0 +1,26 @@
+.color {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.color input {
+  width: 200px;
+  height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.color-result {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
