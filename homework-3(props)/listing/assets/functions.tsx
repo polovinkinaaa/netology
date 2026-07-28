@@ -2,12 +2,12 @@ import type { Offer } from "../models/OfferModels.tsx";
 
 export function getPrice(price: string, currency_code: string): string {
   if (currency_code === "USD") return "$" + price;
-  if (currency_code == "EUR") return "�" + price;
+  if (currency_code == "EUR") return "€" + price;
   return price + " " + currency_code;
 }
 
 export function croppedLongText(text: string): string {
-  if (text.length > 50) return text.slice(0, 50) + "�";
+  if (text.length > 50) return text.slice(0, 50) + "…";
   return text;
 }
 
@@ -19,7 +19,7 @@ export function getClassNameLevel(count: number): string {
 
 export function getNeedData(data: Offer[]): Offer[] {
   return (data as Offer[])
-    .filter((item: Offer) => item.MainImage) //���� ������� �������
+    .filter((item: Offer) => item.MainImage) //есть побитый элемент
     .map((item: Offer) => ({
       listing_id: item.listing_id,
       url: item.url,
