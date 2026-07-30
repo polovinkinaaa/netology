@@ -1,24 +1,21 @@
 import "./Workout.css";
-function Workout() {
+type WorkoutType = {
+  date: string;
+  distance: number;
+  onDelete: (date: string) => void;
+};
+function Workout({ date, distance, onDelete }: WorkoutType) {
   return (
-    <>
-      <div className="workout">
-        <div className="workout-date">05.06.2026</div>
-        <div className="workout-distance">4.7</div>
-        <div className="workout-action">
-          <button className="workout-fix">✎</button>
-          <button className="workout-delete">✘</button>
-        </div>
+    <div className="workout">
+      <div className="workout-date">{date}</div>
+      <div className="workout-distance">{distance}</div>
+      <div className="workout-action">
+        <button className="workout-fix">✎</button>
+        <button className="workout-delete" onClick={() => onDelete(date)}>
+          ✘
+        </button>
       </div>
-      <div className="workout">
-        <div className="workout-date">05.06.2026</div>
-        <div className="workout-distance">13.7</div>
-        <div className="workout-action">
-          <button className="workout-fix">✎</button>
-          <button className="workout-delete">✘</button>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
 

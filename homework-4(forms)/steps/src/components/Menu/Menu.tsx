@@ -2,13 +2,34 @@ import WorkoutList from "../WorkoutList/WorkoutList.tsx";
 import "./Menu.css";
 import { useState } from "react";
 import * as React from "react";
+import {
+  isValidDate,
+  isValidDistance,
+  addData,
+  deleteData,
+  getSortedArray,
+} from "../../utils/function.tsx";
+
 function Menu() {
   const [formData, setFormData] = useState({ date: "", distance: "" });
-  //const [workoutData, setWorkoutData] = useState<Map<string, number>>(new Map());
+  const [workoutData, setWorkoutData] = useState<Map<string, number>>(
+    new Map(),
+  );
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+    if (!isValidDate(formData.date) || !isValidDistance(formData.distance)) {
+      console.error("Please enter a valid details");
+    } else {
+      setWorkoutData(
+        addData(workoutData, formData.date, Number(formData.distance)),
+      );
+      setFormData({ date: "", distance: "" });
+    }
+  };
+
+  const handleDelete = (date: string) => {
+    setWorkoutData(deleteData(workoutData, date));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +56,10 @@ function Menu() {
         />
         <button type="submit">OK</button>
       </form>
-      <WorkoutList />
+      <WorkoutList
+        list={getSortedArray(workoutData)}
+        onDelete={(e) => handleDelete(e)}
+      />
     </div>
   );
 }

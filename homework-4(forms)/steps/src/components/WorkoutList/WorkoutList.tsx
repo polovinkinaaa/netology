@@ -1,7 +1,13 @@
 import Workout from "../Workout/Workout.tsx";
 import "./WorkoutList.css";
 
-function WorkoutList() {
+function WorkoutList({
+  list,
+  onDelete,
+}: {
+  list: [string, number][];
+  onDelete: (date: string) => void;
+}) {
   return (
     <div className="workout-list">
       <div className="title">
@@ -10,7 +16,14 @@ function WorkoutList() {
         <div className="action">Действия</div>
       </div>
       <div className="history">
-        <Workout />
+        {list.map(([date, distance]) => (
+          <Workout
+            key={date}
+            date={date}
+            distance={distance}
+            onDelete={onDelete}
+          />
+        ))}
       </div>
     </div>
   );
