@@ -1,0 +1,47 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: clamp(320px, 80%, 500px);
+  background-color: white;
+}
+
+.add-date {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 1rem;
+}
+
+.add-date label[for="date"] {
+  grid-column: 1;
+  grid-row: 1;
+}
+.add-date input[name="date"] {
+  grid-column: 1;
+  grid-row: 2;
+  height: 2rem;
+  border-radius: 5px;
+}
+.add-date label[for="distance"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+.add-date input[name="distance"] {
+  grid-column: 2;
+  grid-row: 2;
+  height: 2rem;
+  border-radius: 5px;
+}
+.add-date button {
+  grid-column: 3;
+  grid-row: 2;
+  width: min-content;
+  background-color: white;
+  border-radius: 5px;
+  height: 2rem;
+}

@@ -1,0 +1,9 @@
+.workout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workout-action button {
+  border: none;
+  background: none;
+}

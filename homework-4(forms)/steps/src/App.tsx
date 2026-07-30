@@ -1,11 +1,7 @@
-import "./App.css";
+import Menu from "./components/Menu/Menu.tsx";
 
 function App() {
-
-  return (
-    <>
-    </>
-  );
+  return <Menu />;
 }
 
 export default App;
