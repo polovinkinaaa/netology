@@ -37,6 +37,11 @@ function Menu() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleEdit = (date: string, distance: number) => {
+    setWorkoutData(deleteData(workoutData, date));
+    setFormData({ date: date, distance: distance.toString() });
+  };
+
   return (
     <div className="menu">
       <form className="add-date" onSubmit={handleSubmit}>
@@ -59,6 +64,7 @@ function Menu() {
       <WorkoutList
         list={getSortedArray(workoutData)}
         onDelete={(e) => handleDelete(e)}
+        onEdit={(e, f)=> handleEdit(e, f)}
       />
     </div>
   );

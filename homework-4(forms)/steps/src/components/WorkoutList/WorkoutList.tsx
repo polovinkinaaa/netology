@@ -4,9 +4,11 @@ import "./WorkoutList.css";
 function WorkoutList({
   list,
   onDelete,
+  onEdit,
 }: {
   list: [string, number][];
   onDelete: (date: string) => void;
+    onEdit: (date: string, distance: number) => void;
 }) {
   return (
     <div className="workout-list">
@@ -22,6 +24,7 @@ function WorkoutList({
             date={date}
             distance={distance}
             onDelete={onDelete}
+            onEdit={onEdit}
           />
         ))}
       </div>
