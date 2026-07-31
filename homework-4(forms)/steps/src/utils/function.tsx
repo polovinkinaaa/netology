@@ -7,6 +7,7 @@ export function isValidDate(value: string): boolean {
 }
 
 export function isValidDistance(value: string): boolean {
+  if (value.trim() === "") return false;
   const num = Number(value);
   if (Number.isNaN(num)) return false;
   return num >= 0;

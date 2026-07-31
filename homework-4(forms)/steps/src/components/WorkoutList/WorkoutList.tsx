@@ -8,7 +8,7 @@ function WorkoutList({
 }: {
   list: [string, number][];
   onDelete: (date: string) => void;
-    onEdit: (date: string, distance: number) => void;
+  onEdit: (date: string, distance: number) => void;
 }) {
   return (
     <div className="workout-list">

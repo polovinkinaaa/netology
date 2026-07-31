@@ -48,6 +48,7 @@ function Menu() {
         <label htmlFor="date">Дата (ДД.ММ.ГГГГ)</label>
         <input
           name="date"
+          id="date"
           type="text"
           value={formData.date}
           onChange={handleChange}
@@ -55,6 +56,7 @@ function Menu() {
         <label htmlFor="distance">Пройдено км</label>
         <input
           name="distance"
+          id="distance"
           type="text"
           value={formData.distance}
           onChange={handleChange}
@@ -63,8 +65,8 @@ function Menu() {
       </form>
       <WorkoutList
         list={getSortedArray(workoutData)}
-        onDelete={(e) => handleDelete(e)}
-        onEdit={(e, f)=> handleEdit(e, f)}
+        onDelete={handleDelete}
+        onEdit={handleEdit}
       />
     </div>
   );

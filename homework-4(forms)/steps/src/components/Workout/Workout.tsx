@@ -11,7 +11,9 @@ function Workout({ date, distance, onDelete, onEdit }: WorkoutType) {
       <div className="workout-date">{date}</div>
       <div className="workout-distance">{distance}</div>
       <div className="workout-action">
-        <button className="workout-fix" onClick={() => onEdit(date, distance)}>✎</button>
+        <button className="workout-fix" onClick={() => onEdit(date, distance)}>
+          ✎
+        </button>
         <button className="workout-delete" onClick={() => onDelete(date)}>
           ✘
         </button>
