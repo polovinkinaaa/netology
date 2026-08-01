@@ -12,15 +12,19 @@ function Manager() {
     const urls = await Promise.all(files.map((file) => fileToDataUrl(file)));
     setUrlList((prev) => [...prev, ...urls]);
   };
+  const handleDelete = (url: string) => {
+    const urls = urlList.filter((item: string) => item != url);
+    setUrlList(urls);
+  };
   return (
     <div className="manager">
-      <label className="btn-upload">
-        Click to select
+      <div className="btn-upload">
         <input type="file" multiple onChange={handleSelect} />
-      </label>
+        <span className="btn-upload-text">Click to select</span>
+      </div>
       <div className="photo-list">
-        {urlList.map((url: string, i: number) => (
-          <Photo key={`url-${i}`} url={url} />
+        {urlList.map((url: string) => (
+          <Photo key={url} url={url} onDelete={handleDelete} />
         ))}
       </div>
     </div>

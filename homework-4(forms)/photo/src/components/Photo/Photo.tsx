@@ -1,8 +1,14 @@
 import "./Photo.css";
-function Photo({ url }: { url: string }) {
+function Photo({
+  url,
+  onDelete,
+}: {
+  url: string;
+  onDelete: (url: string) => void;
+}) {
   return (
     <div className="photo">
-      <button>x</button>
+      <button onClick={() => onDelete(url)}>x</button>
       <img src={url} />
     </div>
   );
