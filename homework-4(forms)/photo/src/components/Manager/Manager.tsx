@@ -3,17 +3,26 @@ import { fileToDataUrl } from "../../utils/functions.ts";
 import Photo from "../Photo/Photo.tsx";
 import "./Manager.css";
 
+type PhotoItem = {
+    id: string;
+    url: string;
+};
+
 function Manager() {
-  const [urlList, setUrlList] = useState<string[]>([]);
+  const [urlList, setUrlList] = useState<PhotoItem[]>([]);
   const handleSelect = async (evt: React.ChangeEvent<HTMLInputElement>) => {
     const fileList = evt.target.files;
     if (!fileList) return;
     const files = [...fileList];
     const urls = await Promise.all(files.map((file) => fileToDataUrl(file)));
-    setUrlList((prev) => [...prev, ...urls]);
+      const photos = urls.map((url) => ({
+          id: crypto.randomUUID(),
+          url,
+      }));
+    setUrlList((prev) => [...prev, ...photos]);
   };
-  const handleDelete = (url: string) => {
-    const urls = urlList.filter((item: string) => item != url);
+  const handleDelete = (id: string) => {
+    const urls = urlList.filter((item: PhotoItem) => !(item.id === id));
     setUrlList(urls);
   };
   return (
@@ -23,8 +32,8 @@ function Manager() {
         <span className="btn-upload-text">Click to select</span>
       </div>
       <div className="photo-list">
-        {urlList.map((url: string) => (
-          <Photo key={url} url={url} onDelete={handleDelete} />
+        {urlList.map((photo: PhotoItem) => (
+          <Photo key={photo.id} url={photo.url} onDelete={() => handleDelete(photo.id)} />
         ))}
       </div>
     </div>

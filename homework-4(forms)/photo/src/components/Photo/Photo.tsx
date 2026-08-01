@@ -4,11 +4,11 @@ function Photo({
   onDelete,
 }: {
   url: string;
-  onDelete: (url: string) => void;
+  onDelete: () => void;
 }) {
   return (
     <div className="photo">
-      <button onClick={() => onDelete(url)}>x</button>
+      <button onClick={onDelete}>x</button>
       <img src={url} />
     </div>
   );
