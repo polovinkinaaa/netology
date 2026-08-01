@@ -4,8 +4,8 @@ import Photo from "../Photo/Photo.tsx";
 import "./Manager.css";
 
 type PhotoItem = {
-    id: string;
-    url: string;
+  id: string;
+  url: string;
 };
 
 function Manager() {
@@ -15,10 +15,10 @@ function Manager() {
     if (!fileList) return;
     const files = [...fileList];
     const urls = await Promise.all(files.map((file) => fileToDataUrl(file)));
-      const photos = urls.map((url) => ({
-          id: crypto.randomUUID(),
-          url,
-      }));
+    const photos = urls.map((url) => ({
+      id: crypto.randomUUID(),
+      url,
+    }));
     setUrlList((prev) => [...prev, ...photos]);
   };
   const handleDelete = (id: string) => {
@@ -28,12 +28,16 @@ function Manager() {
   return (
     <div className="manager">
       <div className="btn-upload">
-        <input type="file" multiple onChange={handleSelect} />
+        <input type="file" accept="image/*" multiple onChange={handleSelect} />
         <span className="btn-upload-text">Click to select</span>
       </div>
       <div className="photo-list">
         {urlList.map((photo: PhotoItem) => (
-          <Photo key={photo.id} url={photo.url} onDelete={() => handleDelete(photo.id)} />
+          <Photo
+            key={photo.id}
+            url={photo.url}
+            onDelete={() => handleDelete(photo.id)}
+          />
         ))}
       </div>
     </div>
