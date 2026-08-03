@@ -5,7 +5,7 @@ const Card: FC<PropsWithChildren<{ image?: string }>> = ({
   image,
 }) => (
   <div className="card">
-    <img src={image} className="card-img-top" />
+    {image && <img src={image} className="card-img-top" alt="..." />}
     <div className="card-body">{children}</div>
   </div>
 );
