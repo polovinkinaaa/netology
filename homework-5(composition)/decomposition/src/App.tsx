@@ -1,8 +1,9 @@
-function App() {
+import Page from "./components/Page.tsx";
 
+function App() {
   return (
     <>
-
+      <Page />
     </>
   );
 }
