@@ -5,7 +5,7 @@ type ShareType = {
   sign: string;
   difference: number;
 };
-function Shares({ name, value, sign, difference }: ShareType) {
+function Share({ name, value, sign, difference }: ShareType) {
   return (
     <>
       <div>{name}</div>
@@ -17,4 +17,4 @@ function Shares({ name, value, sign, difference }: ShareType) {
   );
 }
 
-export default Shares;
+export default Share;
