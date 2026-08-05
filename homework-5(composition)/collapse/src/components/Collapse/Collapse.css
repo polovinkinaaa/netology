@@ -1,0 +1,41 @@
+.collapse {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+button {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #5380f7;
+  min-width: 260px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    opacity 0.2s linear,
+    max-height 0.3s linear 0.1s;
+}
+
+.open {
+  max-height: 200px;
+  opacity: 1;
+  transition:
+    max-height 0.3s linear,
+    opacity 0.2s linear 0.15s;
+}
