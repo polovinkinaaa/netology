@@ -1,5 +1,6 @@
 /** Основная страница сайта */
 import NewsSection from "./NewsSection.tsx";
+import SearchSection from "./SearchSection.tsx";
 
 function Page() {
   return (
