@@ -1,5 +1,11 @@
+import WatchesPage from "./components/WatchesPage/WatchesPage.tsx";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <WatchesPage />
+    </>
+  );
 }
 
 export default App;
