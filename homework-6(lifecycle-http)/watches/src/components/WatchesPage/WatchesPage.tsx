@@ -17,10 +17,15 @@ function WatchesPage() {
       setWatchData((prev: WatchType[]) => [...prev, newValue]);
     }
   };
+  const handleDelete = (id: string) => {
+    setWatchData((prev: WatchType[]) =>
+      prev.filter((watch) => watch.id !== id),
+    );
+  };
   return (
     <div className="watches-page">
       <WatchForm handleSubmit={handleSubmit} />
-      <WatchList list={watchData} />
+      <WatchList list={watchData} onDelete={handleDelete} />
     </div>
   );
 }
