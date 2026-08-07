@@ -1,0 +1,62 @@
+.watch {
+  height: 12rem;
+  width: 12rem;
+  position: relative;
+}
+.watch button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.watch .title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clock-face {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 10rem;
+  width: 10rem;
+  border: black solid 2px;
+  border-radius: 50%;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.hour {
+  height: 4rem;
+  width: 2px;
+  background-color: black;
+}
+
+.minute {
+  height: 5rem;
+  width: 2px;
+  background-color: black;
+}
+
+.hour::after,
+.minute::after {
+  content: "▲";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -25%);
+  font-size: 10px;
+}
+
+.second {
+  height: 5rem;
+  width: 2px;
+  background: none;
+  border-left: 1px dashed black;
+}
