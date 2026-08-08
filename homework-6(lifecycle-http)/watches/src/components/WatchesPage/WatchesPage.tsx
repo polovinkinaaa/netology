@@ -2,6 +2,7 @@ import WatchForm from "../WatchForm/WatchForm.tsx";
 import WatchList from "../WatchList/WatchList.tsx";
 import { useState } from "react";
 import { isValidTimeZone, type WatchType } from "../../utils/functions.ts";
+import "./WatchesPage.css";
 
 function WatchesPage() {
   const [watchData, setWatchData] = useState<WatchType[]>([]);

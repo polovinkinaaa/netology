@@ -1,0 +1,41 @@
+.watch-form {
+  margin-left: 1rem;
+  width: clamp(320px, 80%, 500px);
+}
+
+.add-watch {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 1rem;
+}
+
+.add-watch label[for="capital"] {
+  grid-column: 1;
+  grid-row: 1;
+}
+.add-watch input[name="capital"] {
+  grid-column: 1;
+  grid-row: 2;
+  height: 2rem;
+  border-radius: 5px;
+}
+.add-watch label[for="timezone"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+.add-watch input[name="timezone"] {
+  grid-column: 2;
+  grid-row: 2;
+  height: 2rem;
+  border-radius: 5px;
+}
+.add-watch button {
+  grid-column: 3;
+  grid-row: 2;
+  width: min-content;
+  background-color: white;
+  border-radius: 5px;
+  height: 2rem;
+}

@@ -1,5 +1,6 @@
 import Watch from "../Watch/Watch.tsx";
 import type { WatchType } from "../../utils/functions.ts";
+import "./WatchList.css";
 
 function WatchList({
   list,
