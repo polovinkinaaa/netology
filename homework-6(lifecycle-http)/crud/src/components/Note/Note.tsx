@@ -1,4 +1,5 @@
 import type { NoteType } from "../../utils/types.ts";
+import "./Note.css"
 
 function Note({
   note,
@@ -10,7 +11,7 @@ function Note({
   return (
     <div className="note">
       <button className="note-delete" onClick={() => onDelete(note.id)}>
-        x
+          ×
       </button>
       <div className="note-text">{note.text}</div>
     </div>

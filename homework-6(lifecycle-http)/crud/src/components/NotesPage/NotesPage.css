@@ -1,0 +1,7 @@
+.notes-page{
+    margin-left: 3rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

@@ -1,5 +1,6 @@
 import Note from "../Note/Note.tsx";
 import type { NoteType } from "../../utils/types.ts";
+import "./NotesList.css"
 
 function NotesList({
   list,

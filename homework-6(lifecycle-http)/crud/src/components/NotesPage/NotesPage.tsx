@@ -3,6 +3,7 @@ import NotesList from "../NotesList/NotesList.tsx";
 import NoteForm from "../NoteForm/NoteForm.tsx";
 import { useState } from "react";
 import type { NoteType } from "../../utils/types.ts";
+import "./NotesPage.css"
 
 function NotesPage() {
   const [noteData, setNoteData] = useState<NoteType[]>([]);
@@ -21,7 +22,7 @@ function NotesPage() {
     setNoteData((prev: NoteType[]) => prev.filter((watch) => watch.id !== id));
   };
   return (
-    <div className="notes-hage">
+    <div className="notes-page">
       <NotesHeader />
       <NotesList list={noteData} onDelete={handleDelete} />
       <NoteForm handleSubmit={handleSubmit} />

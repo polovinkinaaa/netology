@@ -1,15 +1,16 @@
 import { useState } from "react";
 import * as React from "react";
+import "./NoteForm.css"
 
 function NoteForm({ handleSubmit }: { handleSubmit: (text: string) => void }) {
   const [formText, setFormText] = useState("");
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setFormText(e.target.value);
   };
   return (
     <div className="note-form">
       <form
-        className="add-node"
+        className="add-note"
         onSubmit={(e: React.SubmitEvent<HTMLFormElement>) => {
           e.preventDefault();
           handleSubmit(formText);
@@ -17,14 +18,15 @@ function NoteForm({ handleSubmit }: { handleSubmit: (text: string) => void }) {
         }}
       >
         <label htmlFor="new-note">New Note</label>
-        <input
-          name="new-note"
-          id="new-note"
-          type="text"
-          value={formText}
-          onChange={handleChange}
-        />
-        <button type="submit">Добавить</button>
+          <div className="note-input">
+            <textarea
+              name="new-note"
+              id="new-note"
+              value={formText}
+              onChange={handleChange}
+            />
+            <button type="submit">▶</button>
+          </div>
       </form>
     </div>
   );
