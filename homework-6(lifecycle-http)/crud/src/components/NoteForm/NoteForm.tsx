@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as React from "react";
-import "./NoteForm.css"
+import "./NoteForm.css";
 
 function NoteForm({ handleSubmit }: { handleSubmit: (text: string) => void }) {
   const [formText, setFormText] = useState("");
@@ -18,15 +18,15 @@ function NoteForm({ handleSubmit }: { handleSubmit: (text: string) => void }) {
         }}
       >
         <label htmlFor="new-note">New Note</label>
-          <div className="note-input">
-            <textarea
-              name="new-note"
-              id="new-note"
-              value={formText}
-              onChange={handleChange}
-            />
-            <button type="submit">▶</button>
-          </div>
+        <div className="note-input">
+          <textarea
+            name="new-note"
+            id="new-note"
+            value={formText}
+            onChange={handleChange}
+          />
+          <button type="submit">▶</button>
+        </div>
       </form>
     </div>
   );
