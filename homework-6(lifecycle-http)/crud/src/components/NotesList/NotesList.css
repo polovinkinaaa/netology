@@ -1,5 +1,5 @@
-.notes-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }

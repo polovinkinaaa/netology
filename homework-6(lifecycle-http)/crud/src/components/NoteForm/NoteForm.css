@@ -1,52 +1,51 @@
 .note-form {
-    width: 24rem;
+  width: 24rem;
 }
 
 .add-note {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .add-note label[for="new-note"] {
-    font-size: 14px;
-    padding: 0 10px;
+  font-size: 14px;
+  padding: 0 10px;
 }
 
 .note-input {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .note-input textarea[name="new-note"] {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 8rem;
-    box-sizing: border-box;
-    resize: none;
-    overflow-x: hidden;
-    overflow-y: auto;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    padding: 8px;
-    border-radius: 5px;
-    vertical-align: top;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 8rem;
+  box-sizing: border-box;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 8px;
+  border-radius: 5px;
+  vertical-align: top;
 }
 .note-input button {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    background-color: white;
-    border-radius: 50%;
-    border: 1px solid #000;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0 0 3px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 3px;
 }
-
