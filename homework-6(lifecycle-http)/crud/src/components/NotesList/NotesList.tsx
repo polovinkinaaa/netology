@@ -1,13 +1,13 @@
 import Note from "../Note/Note.tsx";
 import type { NoteType } from "../../utils/types.ts";
-import "./NotesList.css"
+import "./NotesList.css";
 
 function NotesList({
   list,
   onDelete,
 }: {
   list: NoteType[];
-  onDelete: (id: string) => void;
+  onDelete: (id: number) => void;
 }) {
   return (
     <div className="notes-list">
