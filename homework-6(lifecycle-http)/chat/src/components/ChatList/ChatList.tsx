@@ -1,11 +1,12 @@
 import type { ChatType } from "../../utils/types.ts";
 import Chat from "../Chat/Chat.tsx";
+import "./ChatList.css"
 
-function ChatList({ list }: { list: ChatType[] }) {
+function ChatList({ list, userId }: { list: ChatType[], userId: string }) {
   return (
     <div className="chat-list">
-      {list.map((note: ChatType) => (
-        <Chat key={note.id} note={note} />
+      {list.map((chat: ChatType) => (
+        <Chat key={chat.id} chat={chat} userId={userId} />
       ))}
     </div>
   );

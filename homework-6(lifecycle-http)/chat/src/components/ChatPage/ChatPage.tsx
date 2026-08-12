@@ -3,6 +3,7 @@ import type { ChatType } from "../../utils/types.ts";
 import ChatHeader from "../ChatHeader/ChatHeader.tsx";
 import ChatList from "../ChatList/ChatList.tsx";
 import ChatForm from "../ChatForm/ChatForm.tsx";
+import "./ChatPage.css"
 
 function ChatPage() {
   const [chatData, setChatData] = useState<ChatType[]>([]);
@@ -66,7 +67,7 @@ function ChatPage() {
   return (
     <div className="chat-page">
       <ChatHeader />
-      <ChatList list={chatData} />
+      <ChatList list={chatData} userId={userId} />
       <ChatForm handleSubmit={handleSubmit} />
     </div>
   );

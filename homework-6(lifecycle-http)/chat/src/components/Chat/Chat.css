@@ -1,0 +1,10 @@
+.chat-message {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 80%;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+.mine { align-self: flex-end; text-align: right; }
+.other { align-self: flex-start; text-align: left; }
