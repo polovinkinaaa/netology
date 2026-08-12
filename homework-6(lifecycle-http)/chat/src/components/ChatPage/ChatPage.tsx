@@ -8,15 +8,26 @@ function ChatPage() {
   const [chatData, setChatData] = useState<ChatType[]>([]);
   const [lastId, setLastId] = useState(0);
   const [updated, setUpdated] = useState(0);
+
+  function getUserId() {
+    let id = localStorage.getItem("userId");
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem("userId", id);
+    }
+    return id;
+  }
+  const [userId] = useState(() => getUserId());
+
   const handleSubmit = (text: string) => {
     if (!text) return;
-    console.log("handleSubmit", text);
+    console.log("handleSubmit", text, "userId", userId);
     fetch("http://localhost:7070/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         id: 0,
-        userId: "5f2d9da0-f624-4309-a598-8ba35d6c4bb6",
+        userId: userId,
         content: text,
       }),
     })
