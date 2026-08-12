@@ -6,6 +6,8 @@ import ChatForm from "../ChatForm/ChatForm.tsx";
 
 function ChatPage() {
   const [chatData, setChatData] = useState<ChatType[]>([]);
+  const [lastId, setLastId] = useState(0);
+  const [updated, setUpdated] = useState(0);
   const handleSubmit = (text: string) => {
     if (!text) return;
     console.log("handleSubmit", text);
@@ -17,23 +19,38 @@ function ChatPage() {
         userId: "5f2d9da0-f624-4309-a598-8ba35d6c4bb6",
         content: text,
       }),
-    }).then(() => loadChats());
+    })
   };
 
   const loadChats = () => {
-    fetch("http://localhost:7070/messages")
+    fetch(`http://localhost:7070/messages?from=${lastId}`)
       .then((response) => response.json())
-      .then((notes: ChatType[]) => {
-        setChatData(notes);
+      .then((messages: ChatType[]) => {
+        if (messages.length > 0) {
+          setChatData((prev) => {const have = new Set(prev.map((m) => m.id));
+            const fresh = messages.filter((m) => !have.has(m.id));
+            return fresh.length ? [...prev, ...fresh] : prev;});
+          setLastId(messages[messages.length - 1].id)
+        }
+        setUpdated(Date.now());
       })
       .catch((error) => {
-        console.error("Не удалось загрузить предыдущие сообщения", error);
+        console.error("Не удалось загрузить новые сообщения", error);
+        setUpdated(Date.now());
       });
   };
 
   useEffect(() => {
     loadChats();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (updated === 0) return;
+    const timeout = window.setTimeout(loadChats, 2000);
+    return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [updated]);
 
   return (
     <div className="chat-page">
