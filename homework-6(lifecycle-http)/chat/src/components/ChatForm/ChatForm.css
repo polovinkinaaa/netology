@@ -1,0 +1,19 @@
+.chat-input {
+  position: relative;
+  max-width: 500px;
+}
+.chat-input input {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 2.5rem;
+  height: 2.5rem;
+}
+.chat-input button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: white;
+  color: green;
+}

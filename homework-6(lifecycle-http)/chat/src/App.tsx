@@ -1,5 +1,11 @@
+import ChatPage from "./components/ChatPage/ChatPage.tsx";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <ChatPage />
+    </>
+  );
 }
 
 export default App;
