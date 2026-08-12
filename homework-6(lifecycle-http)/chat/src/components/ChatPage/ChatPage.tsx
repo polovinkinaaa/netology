@@ -22,7 +22,6 @@ function ChatPage() {
 
   const handleSubmit = (text: string) => {
     if (!text) return;
-    console.log("handleSubmit", text, "userId", userId);
     fetch("http://localhost:7070/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
