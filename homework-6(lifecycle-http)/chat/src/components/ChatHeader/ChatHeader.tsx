@@ -1,6 +1,6 @@
 import "./ChatHeader.css";
-function NotesHeader() {
+function ChatHeader() {
   return <div className="chat-header">Anonymous Chat</div>;
 }
 
-export default NotesHeader;
+export default ChatHeader;
