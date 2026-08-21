@@ -1,9 +1,10 @@
 import * as React from "react";
 import DateTime from "./DateTime.tsx";
+import moment from "moment";
 
 function withTime(Component: React.ComponentType<{ date: string }>) {
   return function DateTimePretty({ date }: { date: string }) {
-    const prettyDate: string = date;
+    const prettyDate: string = moment(date).fromNow();
     return <Component date={prettyDate} />;
   };
 }
