@@ -1,88 +1,108 @@
-import React from 'react';
+import React from "react";
+import GroupSortData from "./components/GroupSortData.tsx";
+import type { DataType } from "./utils/types.ts";
 
-function YearTable(props) {
-  console.log('YearTable', props);
+const url = import.meta.env.VITE_DATA_URL;
 
-  return (
-      <div>
-        <h2>Year Table</h2>
-        <table>
-          <tr>
-            <th>Year</th>
-            <th>Amount</th>
-          </tr>
-          {props.list.map(item => (
-              <tr>
-                <td>{item.year}</td>
-                <td>{item.amount}</td>
-              </tr>
-          ))}
-        </table>
-      </div>
-  );
-};
-
-function SortTable(props) {
-  console.log('SortTable', props);
+function YearTable({ list }: { list: DataType[] }) {
+  console.log("YearTable", list);
 
   return (
-      <div>
-        <h2>Sort Table</h2>
-        <table>
+    <div>
+      <h2>Year Table</h2>
+      <table>
+        <tr>
+          <th>Year</th>
+          <th>Amount</th>
+        </tr>
+        {list.map((item: DataType) => (
           <tr>
-            <th>Date</th>
-            <th>Amount</th>
+            <td>{item.year}</td>
+            <td>{item.amount}</td>
           </tr>
-          {props.list.map(item => (
-              <tr>
-                <td>{item.date}</td>
-                <td>{item.amount}</td>
-              </tr>
-          ))}
-        </table>
-      </div>
+        ))}
+      </table>
+    </div>
   );
-};
+}
 
-function MonthTable(props) {
-  console.log('MonthTable', props);
+function SortTable({ list }: { list: DataType[] }) {
+  console.log("SortTable", list);
 
   return (
-      <div>
-        <h2>Month Table</h2>
-        <table>
+    <div>
+      <h2>Sort Table</h2>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+        </tr>
+        {list.map((item: DataType) => (
           <tr>
-            <th>Month</th>
-            <th>Amount</th>
+            <td>{item.date}</td>
+            <td>{item.amount}</td>
           </tr>
-          {props.list.map(item => (
-              <tr>
-                <td>{item.month}</td>
-                <td>{item.amount}</td>
-              </tr>
-          ))}
-        </table>
-      </div>
+        ))}
+      </table>
+    </div>
   );
-};
+}
 
-// TODO:
-// 1. Загрузите данные с помощью fetch: https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hoc/aggregation/data/data.json
-// 2. Не забудьте вынести URL в переменные окружения (не хардкодьте их здесь)
-// 3. Положите их в state
+function MonthTable({ list }: { list: DataType[] }) {
+  console.log("MonthTable", list);
+
+  return (
+    <div>
+      <h2>Month Table</h2>
+      <table>
+        <tr>
+          <th>Month</th>
+          <th>Amount</th>
+        </tr>
+        {list.map((item: DataType) => (
+          <tr>
+            <td>{item.month}</td>
+            <td>{item.amount}</td>
+          </tr>
+        ))}
+      </table>
+    </div>
+  );
+}
+
+const MonthTableData = GroupSortData(MonthTable);
+const YearTableData = GroupSortData(YearTable);
+const SortTableData = GroupSortData(SortTable);
+
 export default class App extends React.Component {
   state = {
-    list: []
+    list: [],
   };
 
+  componentDidMount() {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("РћС€РёР±РєР° СЃРµС‚Рё");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({ list: data.list });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
   render() {
-    const {list} = this.state;
+    const { list } = this.state;
     return (
-        <div id="app">
-          <MonthTable list={list} />
-          <YearTable list={list} />
-          <SortTable list={list} />
-        </div>
+      <div id="app">
+        <MonthTableData list={list} />
+        <YearTableData list={list} />
+        <SortTableData list={list} />
+      </div>
     );
   }
 }
