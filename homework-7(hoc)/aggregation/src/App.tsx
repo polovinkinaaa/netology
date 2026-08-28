@@ -70,9 +70,9 @@ function MonthTable({ list }: { list: DataType[] }) {
   );
 }
 
-const MonthTableData = GroupSortData(MonthTable);
-const YearTableData = GroupSortData(YearTable);
-const SortTableData = GroupSortData(SortTable);
+const MonthTableData = GroupSortData(MonthTable, "month");
+const YearTableData = GroupSortData(YearTable, "year");
+const SortTableData = GroupSortData(SortTable, "sort");
 
 export default class App extends React.Component {
   state = {
