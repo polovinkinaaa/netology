@@ -1,75 +1,10 @@
 import React from "react";
 import GroupSortData from "./components/GroupSortData.tsx";
-import type { DataType } from "./utils/types.ts";
+import YearTable from "./components/YearTable.tsx";
+import SortTable from "./components/SortTable.tsx";
+import MonthTable from "./components/MonthTable.tsx";
 
 const url = import.meta.env.VITE_DATA_URL;
-
-function YearTable({ list }: { list: DataType[] }) {
-  console.log("YearTable", list);
-
-  return (
-    <div>
-      <h2>Year Table</h2>
-      <table>
-        <tr>
-          <th>Year</th>
-          <th>Amount</th>
-        </tr>
-        {list.map((item: DataType) => (
-          <tr>
-            <td>{item.year}</td>
-            <td>{item.amount}</td>
-          </tr>
-        ))}
-      </table>
-    </div>
-  );
-}
-
-function SortTable({ list }: { list: DataType[] }) {
-  console.log("SortTable", list);
-
-  return (
-    <div>
-      <h2>Sort Table</h2>
-      <table>
-        <tr>
-          <th>Date</th>
-          <th>Amount</th>
-        </tr>
-        {list.map((item: DataType) => (
-          <tr>
-            <td>{item.date}</td>
-            <td>{item.amount}</td>
-          </tr>
-        ))}
-      </table>
-    </div>
-  );
-}
-
-function MonthTable({ list }: { list: DataType[] }) {
-  console.log("MonthTable", list);
-
-  return (
-    <div>
-      <h2>Month Table</h2>
-      <table>
-        <tr>
-          <th>Month</th>
-          <th>Amount</th>
-        </tr>
-        {list.map((item: DataType) => (
-          <tr>
-            <td>{item.month}</td>
-            <td>{item.amount}</td>
-          </tr>
-        ))}
-      </table>
-    </div>
-  );
-}
-
 const MonthTableData = GroupSortData(MonthTable, "month");
 const YearTableData = GroupSortData(YearTable, "year");
 const SortTableData = GroupSortData(SortTable, "sort");
