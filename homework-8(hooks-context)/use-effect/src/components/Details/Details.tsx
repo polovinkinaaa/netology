@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import type { DetailType, UserType } from "../utils/types.ts";
+import type { DetailType, UserType } from "../../utils/types.ts";
+import "./Details.css";
 
 const url = import.meta.env.VITE_USER_URL;
 
@@ -43,10 +44,12 @@ function Details({ info }: { info: UserType | null }) {
   return (
     <div className="details">
       <img src={`${detail.avatar}?img=${detail.id}`} alt={detail.name} />
-      <h2>{detail.name}</h2>
-      <p>City: {detail.details.city}</p>
-      <p>Company: {detail.details.company}</p>
-      <p>Position: {detail.details.position}</p>
+      <div className="text">
+        <h2>{detail.name}</h2>
+        <p>City: {detail.details.city}</p>
+        <p>Company: {detail.details.company}</p>
+        <p>Position: {detail.details.position}</p>
+      </div>
     </div>
   );
 }

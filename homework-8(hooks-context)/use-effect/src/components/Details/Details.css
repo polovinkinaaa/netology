@@ -1,0 +1,21 @@
+.details {
+  border: 1px solid #ddd;
+  padding: 0;
+  width: min(60%, 350px);
+}
+
+.details img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.text h2,
+.text p {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.text p:last-child {
+  border-bottom: none;
+}

@@ -14,7 +14,7 @@ function List({
     <ul className="list">
       {users.map((user: UserType) => (
         <li
-          className={`user ${user.id === selectedId ? "selected" : null}`}
+          className={`user ${user.id === selectedId ? "selected" : ""}`}
           key={user.id}
           onClick={() => onSelect(user)}
         >

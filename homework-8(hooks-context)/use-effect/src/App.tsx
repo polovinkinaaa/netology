@@ -1,6 +1,6 @@
 import "./App.css";
 import List from "./components/List/List.tsx";
-import Details from "./components/Details.tsx";
+import Details from "./components/Details/Details.tsx";
 import { useEffect, useState } from "react";
 import type { UserType } from "./utils/types.ts";
 
