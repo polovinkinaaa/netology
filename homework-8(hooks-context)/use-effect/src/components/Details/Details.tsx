@@ -21,20 +21,28 @@ function Details({ info }: { info: UserType | null }) {
   }
   useEffect(() => {
     if (currentId === null) return;
+    let processIsFinish = false;
     fetch(url.replace("{id}", String(currentId)))
       .then((response) => {
         if (!response.ok) throw new Error("Ошибка сети");
         return response.json();
       })
       .then((data: DetailType) => {
-        setDetail(data);
-        setIsLoading(false);
+        if (!processIsFinish) {
+          setDetail(data);
+          setIsLoading(false);
+        }
       })
       .catch((err) => {
-        console.error(err);
-        setError("Не удалось загрузить");
-        setIsLoading(false);
+        if (!processIsFinish) {
+          console.error(err);
+          setError("Не удалось загрузить");
+          setIsLoading(false);
+        }
       });
+    return () => {
+      processIsFinish = true;
+    };
   }, [currentId]);
   if (currentId === null) return null;
   if (isLoading) return <div className="details">Загрузка...</div>;
