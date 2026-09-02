@@ -8,7 +8,7 @@ function List({
 }: {
   users: UserType[];
   selectedId: number | null;
-  onSelect: (id: number) => void;
+  onSelect: (info: UserType) => void;
 }) {
   return (
     <ul className="list">
@@ -16,7 +16,7 @@ function List({
         <li
           className={`user ${user.id === selectedId ? "selected" : null}`}
           key={user.id}
-          onClick={() => onSelect(user.id)}
+          onClick={() => onSelect(user)}
         >
           {user.name}
         </li>

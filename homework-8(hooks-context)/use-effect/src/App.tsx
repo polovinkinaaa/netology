@@ -8,9 +8,9 @@ const url = import.meta.env.VITE_USERS_URL;
 
 function App() {
   const [users, setUsers] = useState<UserType[]>([]);
-  const [selectedId, setSelectedId] = useState<number | null>(null);
-  function onSelect(id: number) {
-    setSelectedId(id);
+  const [info, setInfo] = useState<UserType | null>(null);
+  function onSelect(user: UserType) {
+    setInfo(user);
   }
   useEffect(() => {
     fetch(url)
@@ -30,8 +30,8 @@ function App() {
 
   return (
     <div className="app">
-      <List users={users} selectedId={selectedId} onSelect={onSelect} />
-      <Details selectedId={selectedId} />
+      <List users={users} selectedId={info?.id ?? null} onSelect={onSelect} />
+      <Details info={info} />
     </div>
   );
 }
