@@ -18,4 +18,4 @@ export type NewType = {
   title: string;
   image: string;
   content: string;
-}
+};

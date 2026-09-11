@@ -1,10 +1,10 @@
-import {useContext, useEffect, useState} from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/AuthContext.tsx";
-import type {NewType} from "../../types.ts";
+import type { NewType } from "../../types.ts";
 import New from "../New/New.tsx";
 
 function News() {
-  const {token, setToken, setProfile} = useContext(AuthContext);
+  const { token, setToken, setProfile } = useContext(AuthContext);
   const [news, setNews] = useState<NewType[]>([]);
 
   useEffect(() => {
@@ -27,13 +27,13 @@ function News() {
     loadNews();
   }, [token]);
 
-  return <div className="news">
-    {
-      news.map((item : NewType) => (
-          <New key={item.id} {...item} />
-      ))
-    }
-  </div>;
+  return (
+    <div className="news">
+      {news.map((item: NewType) => (
+        <New key={item.id} {...item} />
+      ))}
+    </div>
+  );
 }
 
 export default News;
