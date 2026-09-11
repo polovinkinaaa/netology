@@ -12,3 +12,10 @@ export type AuthContextValue = {
   setToken: Dispatch<SetStateAction<string | null>>;
   setProfile: Dispatch<SetStateAction<Profile | null>>;
 };
+
+export type NewType = {
+  id: string;
+  title: string;
+  image: string;
+  content: string;
+}
