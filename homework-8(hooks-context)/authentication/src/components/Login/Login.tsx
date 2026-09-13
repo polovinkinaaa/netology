@@ -1,6 +1,7 @@
 import AuthContext from "../../context/AuthContext.tsx";
 import { useContext, useState } from "react";
 import * as React from "react";
+import "./Login.css";
 
 function Login() {
   const [formData, setFormData] = useState({ login: "", password: "" });
@@ -46,26 +47,29 @@ function Login() {
   };
 
   return (
-    <form className="add-user" onSubmit={handleSubmit}>
-      <label htmlFor="login">Username</label>
-      <input
-        name="login"
-        id="login"
-        type="text"
-        value={formData.login}
-        onChange={handleChange}
-      />
-      <label htmlFor="password">Password</label>
-      <input
-        name="password"
-        id="password"
-        type="password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      <button type="submit">Login</button>
-      {error && <p className="error">{error}</p>}
-    </form>
+    <div className="toolbar-login">
+      <div className="website-name">Neto Social</div>
+      <form className="add-user" onSubmit={handleSubmit}>
+        <input
+          name="login"
+          id="login"
+          type="text"
+          placeholder="Username"
+          value={formData.login}
+          onChange={handleChange}
+        />
+        <input
+          name="password"
+          id="password"
+          type="password"
+          placeholder="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        <button type="submit">Login</button>
+        {error && <p className="error">{error}</p>}
+      </form>
+    </div>
   );
 }
 

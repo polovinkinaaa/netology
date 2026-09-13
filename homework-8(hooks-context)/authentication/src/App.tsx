@@ -5,6 +5,7 @@ import Login from "./components/Login/Login.tsx";
 import Toolbar from "./components/Toolbar/Toolbar.tsx";
 import News from "./components/News/News.tsx";
 import type { Profile } from "./types.ts";
+import Banner from "./components/Banner/Banner.tsx";
 
 function App() {
   const [token, setToken] = useState<string | null>(() =>
@@ -18,7 +19,10 @@ function App() {
   return (
     <AuthContext.Provider value={{ token, setToken, profile, setProfile }}>
       {!token ? (
-        <Login />
+        <>
+          <Login />
+          <Banner />
+        </>
       ) : (
         <>
           <Toolbar />

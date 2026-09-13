@@ -1,0 +1,14 @@
+.new {
+  width: 30%;
+  border: black solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-text {
+  margin: 0 1rem;
+}
+
+.new img {
+  width: 100%;
+}

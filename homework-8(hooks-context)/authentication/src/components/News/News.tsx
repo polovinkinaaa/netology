@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/AuthContext.tsx";
 import type { NewType } from "../../types.ts";
 import New from "../New/New.tsx";
+import "./News.css";
 
 function News() {
   const { token, setToken, setProfile } = useContext(AuthContext);
