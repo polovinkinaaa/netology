@@ -1,25 +1,46 @@
 import "./NewPostPage.css";
+import { createPost } from "../../../utils/functions.ts";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function NewPostPage() {
+  const [context, setContext] = useState("");
+  const handleSubmit = async () => {
+    const text = context.trim();
+    if (!text) return;
+    await createPost(text);
+    setContext("");
+    navigate("/");
+  };
+
+  const handleDelete = () => {
+    navigate("/");
+    setContext("");
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setContext(e.target.value);
+  };
+  const navigate = useNavigate();
   return (
     <div className="new-post">
       <div className="new-post__header">
-        <button type="button" className="new-post__action">
+        <button className="new-post__action">
           <span className="new-post__icon">📝</span>
           Публикация
         </button>
-        <button type="button" className="new-post__action">
+        <button className="new-post__action">
           <span className="new-post__icon">🖼️</span>
           Фото/Видео
         </button>
-        <button type="button" className="new-post__action">
+        <button className="new-post__action">
           <span className="new-post__icon">🔴</span>
           Прямой эфир
         </button>
-        <button type="button" className="new-post__action">
+        <button className="new-post__action">
           <span className="new-post__icon">⋯</span>
           Еще
         </button>
-        <button type="button" className="new-post__close">
+        <button className="new-post__close" onClick={handleDelete}>
           ×
         </button>
       </div>
@@ -29,10 +50,12 @@ function NewPostPage() {
           className="new-post__input"
           placeholder="Что у вас нового?"
           rows={4}
+          value={context}
+          onChange={(e) => handleChange(e)}
         />
       </div>
       <div className="new-post__button">
-        <button type="button" className="new-post__add">
+        <button className="new-post__add" onClick={handleSubmit}>
           Опубликовать
         </button>
       </div>
