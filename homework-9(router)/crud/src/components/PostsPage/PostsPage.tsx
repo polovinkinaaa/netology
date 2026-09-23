@@ -26,6 +26,9 @@ function PostsPage() {
   const addPost = async () => {
     navigate("posts/new");
   };
+  const openPost = async (id: number) => {
+    navigate(`/posts/${id}`);
+  };
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void fetchPosts();
@@ -39,13 +42,20 @@ function PostsPage() {
         <button onClick={addPost}> Создать пост </button>
       </div>
       <div className="post-list">
-        {posts.map((post) => (
-          <PostCard
-            key={post.id}
-            content={post.content}
-            created={post.created}
-          />
-        ))}
+        {posts
+          .sort((a, b) => b.created - a.created)
+          .map((post) => (
+            <div
+              key={post.id}
+              className="post-card-wrapper"
+              onClick={(event) => {
+                if ((event.target as HTMLElement).closest("button")) return;
+                openPost(post.id);
+              }}
+            >
+              <PostCard content={post.content} created={post.created} />
+            </div>
+          ))}
       </div>
     </div>
   );

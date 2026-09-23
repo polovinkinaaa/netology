@@ -6,6 +6,14 @@ export async function getPosts() {
   return response.json();
 }
 
+export async function getPost(id: string) {
+  const response = await fetch(`http://localhost:7070/posts/${id}`);
+  if (!response.ok) {
+    throw new Error("Ошибка сети");
+  }
+  return response.json();
+}
+
 export async function createPost(content: string) {
   const response = await fetch("http://localhost:7070/posts", {
     method: "POST",

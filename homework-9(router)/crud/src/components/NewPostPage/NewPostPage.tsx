@@ -47,6 +47,7 @@ function NewPostPage() {
       <div className="new-post__text">
         <div className="new-post__avatar" />
         <textarea
+          autoFocus
           className="new-post__input"
           placeholder="Что у вас нового?"
           rows={4}

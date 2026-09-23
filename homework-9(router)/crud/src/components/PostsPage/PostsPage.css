@@ -44,3 +44,6 @@
   background-color: #2e2ef5;
   margin: 8px 16px 8px 0;
 }
+.post-card-wrapper {
+  cursor: pointer;
+}
