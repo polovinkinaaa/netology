@@ -4,12 +4,14 @@ import { deletePost, getPost } from "../../../utils/functions.ts";
 import { useEffect, useState } from "react";
 import type { PostType } from "../../types.ts";
 import "./PostPage.css";
+import EditPostCard from "../../EditPostCard/EditPostCard.tsx";
 
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState<PostType>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [isEditPost, setIsEditPost] = useState(false);
   const fetchPost = async (postId: string) => {
     try {
       setLoading(true);
@@ -37,6 +39,9 @@ function PostPage() {
     await deletePost(id);
     navigate("/");
   };
+  const handleEdit = () => {
+    setIsEditPost(true);
+  };
   if (!id) return <p>Некорректный адрес поста</p>;
   if (loading) return <p>Загрузка...</p>;
   if (error) return <p>Не удалось загрузить пост</p>;
@@ -44,14 +49,20 @@ function PostPage() {
 
   return (
     <div className="post-page">
-      <PostCard content={post.content} created={post.created}>
-        <div className="post-page__button">
-          <button className="post-page__fix"> Изменить </button>
-          <button className="post-page__delete" onClick={handleDelete}>
-            Удалить
-          </button>
-        </div>
-      </PostCard>
+      {isEditPost ? (
+        <EditPostCard />
+      ) : (
+        <PostCard content={post.content} created={post.created}>
+          <div className="post-page__button">
+            <button className="post-page__fix" onClick={handleEdit}>
+              Изменить
+            </button>
+            <button className="post-page__delete" onClick={handleDelete}>
+              Удалить
+            </button>
+          </div>
+        </PostCard>
+      )}
     </div>
   );
 }

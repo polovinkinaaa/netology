@@ -1,0 +1,114 @@
+.edit-post {
+  width: 100%;
+  padding: 16px 16px 0 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.edit-post__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px;
+  background: #eee;
+}
+.edit-post__title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.edit-post__close {
+  position: absolute;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  color: black;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.edit-post__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+.edit-post__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+}
+.edit-post__input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow-y: auto;
+  font-size: 28px;
+}
+.edit-post__emoji {
+  flex: 0 0 auto;
+  font-size: 22px;
+  user-select: none;
+}
+.edit-post__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 8px 0;
+}
+.edit-post__action {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background: #eee;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+.edit-post__gif {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 20px;
+  padding: 0 4px;
+  border: 2px solid #a033ff;
+  border-radius: 4px;
+  color: #a033ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.edit-post__footer {
+  display: flex;
+  justify-content: end;
+  padding: 8px 16px;
+  border-top: 1px solid grey;
+}
+.edit-post__save {
+  padding: 4px 16px;
+  margin: 0;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: #1877f2;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
