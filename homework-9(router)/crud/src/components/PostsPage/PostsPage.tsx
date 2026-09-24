@@ -42,20 +42,18 @@ function PostsPage() {
         <button onClick={addPost}> Создать пост </button>
       </div>
       <div className="post-list">
-        {posts
-          .sort((a, b) => b.created - a.created)
-          .map((post) => (
-            <div
-              key={post.id}
-              className="post-card-wrapper"
-              onClick={(event) => {
-                if ((event.target as HTMLElement).closest("button")) return;
-                openPost(post.id);
-              }}
-            >
-              <PostCard content={post.content} created={post.created} />
-            </div>
-          ))}
+        {[...posts].reverse().map((post) => (
+          <div
+            key={post.id}
+            className="post-card-wrapper"
+            onClick={(event) => {
+              if ((event.target as HTMLElement).closest("button")) return;
+              openPost(post.id);
+            }}
+          >
+            <PostCard content={post.content} created={post.created} />
+          </div>
+        ))}
       </div>
     </div>
   );

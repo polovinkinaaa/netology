@@ -34,3 +34,14 @@ export async function deletePost(id: string) {
     throw new Error("Ошибка сети");
   }
 }
+
+export async function editPost(content: string, id: string) {
+  const response = await fetch(`http://localhost:7070/posts/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id, content }),
+  });
+  if (!response.ok) {
+    throw new Error("Ошибка сети");
+  }
+}

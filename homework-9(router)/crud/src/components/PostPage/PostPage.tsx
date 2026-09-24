@@ -29,10 +29,10 @@ function PostPage() {
     }
   };
   useEffect(() => {
-    if (!id) return;
+    if (!id || isEditPost) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void fetchPost(id);
-  }, [id]);
+  }, [id, isEditPost]);
   const navigate = useNavigate();
   const handleDelete = async () => {
     if (!id) return;
@@ -40,7 +40,7 @@ function PostPage() {
     navigate("/");
   };
   const handleEdit = () => {
-    setIsEditPost(true);
+    setIsEditPost(!isEditPost);
   };
   if (!id) return <p>Некорректный адрес поста</p>;
   if (loading) return <p>Загрузка...</p>;
@@ -50,7 +50,7 @@ function PostPage() {
   return (
     <div className="post-page">
       {isEditPost ? (
-        <EditPostCard />
+        <EditPostCard id={id} content={post.content} onClose={handleEdit} />
       ) : (
         <PostCard content={post.content} created={post.created}>
           <div className="post-page__button">
