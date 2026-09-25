@@ -1,0 +1,51 @@
+.toolbar {
+  width: 100%;
+  background-color: #f5efc6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info {
+  justify-content: space-around;
+  display: flex;
+  width: min(30%, 300px);
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.user-name {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  border: red solid 1px;
+  color: red;
+  background-color: white;
+  margin: 8px 0;
+}
+
+.user-info img {
+  border-radius: 50%;
+  margin: 8px 0;
+}
+
+.website-name {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
