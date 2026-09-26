@@ -1,27 +1,27 @@
+import type { NewType } from "../../types.ts";
+import "./NewItem.css";
+import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/AuthContext.tsx";
-import type { NewType } from "../../types.ts";
-import New from "../New/New.tsx";
-import "./News.css";
+import { getNewItem } from "../../utils/functions.ts";
 import { useLogout } from "../../utils/hooks.ts";
-import { getNewsItem } from "../../utils/functions.ts";
-
-function News() {
+function NewItem() {
   const { token } = useContext(AuthContext);
-  const [news, setNews] = useState<NewType[]>([]);
-  const logout = useLogout();
+  const { id } = useParams();
+  const [newItem, setNewItem] = useState<NewType>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [notFound, setNotFound] = useState(false);
-  const fetchNews = async () => {
+  const logout = useLogout();
+  const fetchNew = async (NewId: string) => {
     if (!token) return;
     try {
       setLoading(true);
-      const response = await getNewsItem(token);
+      const response = await getNewItem(NewId, token);
       if (!response) {
         throw new Error("Новость не найдена");
       }
-      setNews(response);
+      setNewItem(response);
       setError(false);
     } catch (err) {
       if (err instanceof Error && err.message === "401") {
@@ -38,24 +38,24 @@ function News() {
       setLoading(false);
     }
   };
-
   useEffect(() => {
-    if (!token) return;
+    if (!id || !token) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    void fetchNews();
-  }, [token]);
+    void fetchNew(id);
+  }, [id, token]);
   if (notFound) return <h1 className="not-found">Not Found</h1>;
+  if (!id) return <p>Некорректный адрес новости</p>;
   if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>Не удалось загрузить новости</p>;
-  if (!news) return <p>Новости не найдены</p>;
-
+  if (error) return <p>Не удалось загрузить новость</p>;
+  if (!newItem) return <p>Новость не найдена</p>;
   return (
-    <div className="news">
-      {news.map((item: NewType) => (
-        <New key={item.id} {...item} />
-      ))}
+    <div className="new-item">
+      <img src={newItem.image} alt={newItem.title} />
+      <div className="new-text">
+        <h3>{newItem.title}</h3>
+        <p>{newItem.content}</p>
+      </div>
     </div>
   );
 }
-
-export default News;
+export default NewItem;

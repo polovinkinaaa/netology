@@ -3,6 +3,8 @@
   background-color: #f5efc6;
   display: flex;
   justify-content: space-between;
+  user-select: none;
+  cursor: default;
 }
 
 .user-info {

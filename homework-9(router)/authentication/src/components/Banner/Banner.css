@@ -14,3 +14,7 @@
   margin: 0;
   color: #444;
 }
+.banner {
+  user-select: none;
+  cursor: default;
+}

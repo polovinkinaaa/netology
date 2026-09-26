@@ -7,6 +7,7 @@ import News from "./components/News/News.tsx";
 import type { Profile } from "./types.ts";
 import Banner from "./components/Banner/Banner.tsx";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import NewItem from "./components/NewItem/NewItem.tsx";
 
 function App() {
   const [token, setToken] = useState<string | null>(() =>
@@ -54,6 +55,7 @@ function App() {
                 token ? (
                   <>
                     <Toolbar />
+                    <NewItem />
                   </>
                 ) : (
                   <Navigate to="/" replace />

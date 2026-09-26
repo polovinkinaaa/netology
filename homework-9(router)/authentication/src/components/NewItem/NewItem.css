@@ -1,0 +1,23 @@
+.new-item {
+  width: 30%;
+  border: black solid 1px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  cursor: default;
+}
+
+.new-text {
+  margin: 0 1rem;
+}
+
+.new img {
+  width: 100%;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  font-size: 72px;
+  font-weight: 300;
+}

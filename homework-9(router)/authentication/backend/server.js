@@ -38,25 +38,25 @@ const news = [
   {
     id: uuid.v4(),
     title: faker.lorem.words(),
-    image: "https://placeimg.com/640/480/nature",
+    image: "https://i.pravatar.cc/640?img=1",
     content: faker.lorem.paragraph(),
   },
   {
     id: uuid.v4(),
     title: faker.lorem.words(),
-    image: "https://placeimg.com/640/480/arch",
+    image: "https://i.pravatar.cc/640?img=2",
     content: faker.lorem.paragraph(),
   },
   {
     id: uuid.v4(),
     title: faker.lorem.words(),
-    image: "https://placeimg.com/640/480/tech",
+    image: "https://i.pravatar.cc/640?img=4",
     content: faker.lorem.paragraph(),
   },
   {
     id: uuid.v4(),
     title: faker.lorem.words(),
-    image: "https://placeimg.com/640/480/sepia",
+    image: "https://i.pravatar.cc/640?img=5",
     content: faker.lorem.paragraph(),
   },
 ];
