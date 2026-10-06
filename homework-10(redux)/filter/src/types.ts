@@ -1,6 +1,7 @@
 import {
   CANCEL_EDIT,
-  type CHANGE_FIELD,
+  CHANGE_FIELD,
+  CHANGE_FILTER,
   EDIT_ITEM,
   REMOVE_ITEM,
   SAVE_ITEM,
@@ -27,3 +28,12 @@ export type ListAction =
   | { type: typeof EDIT_ITEM; payload: { id: string } }
   | { type: typeof CANCEL_EDIT }
   | { type: typeof REMOVE_ITEM; payload: { id: string } };
+
+export type FilterState = {
+  filter: string;
+};
+
+export type FilterAction = {
+  type: typeof CHANGE_FILTER;
+  payload: { filter: string };
+};

@@ -1,6 +1,7 @@
 import { combineReducers, compose, legacy_createStore } from "redux";
 
 import listReducer from "./listReducer.ts";
+import filterReducer from "./filterReducer.ts";
 
 declare global {
   interface Window {
@@ -11,6 +12,7 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION__?.();
 
 const rootReducer = combineReducers({
   list: listReducer,
+  filter: filterReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

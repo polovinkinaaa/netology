@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   CANCEL_EDIT,
   CHANGE_FIELD,
+  CHANGE_FILTER,
   EDIT_ITEM,
   REMOVE_ITEM,
   SAVE_ITEM,
@@ -16,6 +17,13 @@ export const MainApp = () => {
   const { items, form, editingId } = useSelector(
     (state: RootState) => state.list,
   );
+  const {filter } = useSelector(
+    (state: RootState) => state.filter,
+  );
+
+  const visibleItems = items.filter((item) =>
+        item.text.toLowerCase().includes(filter.toLowerCase()),
+    );
 
   const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,49 +34,66 @@ export const MainApp = () => {
 
   return (
     <div className="app">
-      <form className="add-date" onSubmit={handleSubmit}>
-        <input
-          name="user_text"
-          id="user_text"
-          type="text"
-          required
-          value={form.text}
-          onChange={(e) => {
-            dispatch({
-              type: CHANGE_FIELD,
-              payload: { text: e.target.value, value: form.value },
-            });
-          }}
-        />
-        <input
-          name="user_number"
-          id="user_number"
-          type="number"
-          required
-          value={form.value}
-          onChange={(e) => {
-            dispatch({
-              type: CHANGE_FIELD,
-              payload: { text: form.text, value: e.target.value },
-            });
-          }}
-        />
-        <button type="submit">Save</button>
-        {editingId && (
-          <button
-            type="button"
-            onClick={() =>
+      <div className="header">
+        <form className="add-date" onSubmit={handleSubmit}>
+          <input
+            name="user_text"
+            id="user_text"
+            type="text"
+            required
+            value={form.text}
+            onChange={(e) => {
               dispatch({
-                type: CANCEL_EDIT,
-              })
-            }
-          >
-            Cancel
-          </button>
-        )}
-      </form>
-      {items.length > 0 &&
-        items.map((item: ItemType) => (
+                type: CHANGE_FIELD,
+                payload: { text: e.target.value, value: form.value },
+              });
+            }}
+          />
+          <input
+            name="user_number"
+            id="user_number"
+            type="number"
+            required
+            value={form.value}
+            onChange={(e) => {
+              dispatch({
+                type: CHANGE_FIELD,
+                payload: { text: form.text, value: e.target.value },
+              });
+            }}
+          />
+          <button type="submit">Save</button>
+          {editingId && (
+            <button
+              type="button"
+              onClick={() =>
+                dispatch({
+                  type: CANCEL_EDIT,
+                })
+              }
+            >
+              Cancel
+            </button>
+          )}
+        </form>
+        <div className="filter">
+            Filter:
+          <input
+            name="user_filter"
+            id="user_filter"
+            type="text"
+            value={filter}
+            onChange={(e) => {
+              dispatch({
+                type: CHANGE_FILTER,
+                payload: { filter: e.target.value },
+              });
+            }}
+          />
+        </div>
+      </div>
+      {visibleItems.length > 0 &&
+          visibleItems.map((item: ItemType) => (
           <div className="item" key={item.id}>
             - {item.text} {item.value}
             <div className="buttons">
