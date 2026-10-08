@@ -7,7 +7,7 @@ const ProductList = () => {
   return (
     <div className="product-list">
       {products.map((product) => (
-        <div className="product" id={product.id}>
+        <div className="product" key={product.id}>
           <img src={product.image} alt="Превью" width={120} />
           <div className="product-price">{`${product.price} ₽`}</div>
           <div className="product-brand">
