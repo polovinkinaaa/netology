@@ -1,9 +1,11 @@
-import { MainApp } from "./components/MainApp.tsx";
+import ProductList from "./components/ProductList.tsx";
+import ProductForm from "./components/ProductForm.tsx";
 
 function App() {
   return (
     <div className="App">
-      <MainApp />
+      <ProductForm />
+      <ProductList />
     </div>
   );
 }
