@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../redux/store.ts";
 import { CANCEL_EDIT, CHANGE_FIELD, SAVE_ITEM } from "../redux/actions.ts";
 import type { SubmitEvent } from "react";
+import "./ProductForm.css";
 
 const ProductForm = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const ProductForm = () => {
   return (
     <div className="product-form">
       <form className="add-product" onSubmit={handleSubmit}>
+        <h2 className="form-title">Новый товар</h2>
         <label htmlFor="title">Название</label>
         <input
           name="title"
@@ -62,19 +64,21 @@ const ProductForm = () => {
             });
           }}
         />
-        <label htmlFor="original">Оригинал</label>
-        <input
-          name="original"
-          id="original"
-          type="checkbox"
-          checked={form.original}
-          onChange={(e) => {
-            dispatch({
-              type: CHANGE_FIELD,
-              payload: { ...form, original: e.target.checked },
-            });
-          }}
-        />
+        <div className="field-check">
+          <input
+            name="original"
+            id="original"
+            type="checkbox"
+            checked={form.original}
+            onChange={(e) => {
+              dispatch({
+                type: CHANGE_FIELD,
+                payload: { ...form, original: e.target.checked },
+              });
+            }}
+          />
+          <label htmlFor="original">Оригинал</label>
+        </div>
         <label htmlFor="price">Цена</label>
         <input
           name="price"
@@ -103,17 +107,19 @@ const ProductForm = () => {
             });
           }}
         />
-        <button type="submit">Save</button>
-        <button
-          type="button"
-          onClick={() =>
-            dispatch({
-              type: CANCEL_EDIT,
-            })
-          }
-        >
-          Cancel
-        </button>
+        <div className="form-actions">
+          <button type="submit">Save</button>
+          <button
+            type="button"
+            onClick={() =>
+              dispatch({
+                type: CANCEL_EDIT,
+              })
+            }
+          >
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );

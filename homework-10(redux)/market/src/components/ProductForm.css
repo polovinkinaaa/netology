@@ -1,0 +1,61 @@
+.product-form {
+  margin: 16px;
+}
+.form-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+.add-product {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 420px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #fc0;
+  border-radius: 12px;
+}
+.add-product label {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.add-product input[type="text"],
+.add-product input[type="number"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+.add-product img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.field-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.field-check label {
+  margin-top: 0;
+}
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.form-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+.form-actions button[type="submit"] {
+  background: #fc0;
+}
+.form-actions button[type="button"] {
+  background: #eee;
+}
