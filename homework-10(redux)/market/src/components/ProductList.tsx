@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import type { RootState } from "../redux/store.ts";
+import "./ProductList.css";
 
 const ProductList = () => {
   const { products } = useSelector((state: RootState) => state.list);

@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.product-form,
+.product-list {
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .product-list {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+  .product-form {
+    flex: 0 0 452px;
+    width: auto;
+  }
+}
